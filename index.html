@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <title>Portfolio-Serhii</title>
   </head>
   <body>
@@ -28,7 +30,7 @@
     <main>
       <section class="hero-section">
         <div class="container hero">
-          <div class="left-side-hero">
+          <div data-aos="fade-right" class="left-side-hero">
             <h1 class="typing-container">
               <span class="typing">Hi, I’m Serhii</span>
             </h1>
@@ -50,13 +52,13 @@
               ></a>
             </div>
           </div>
-          <div class="right-side-hero">
+          <div data-aos="fade-left" class="right-side-hero">
             <img src="images/my-photo.jpg" />
           </div>
         </div>
       </section>
       <section class="about-section container">
-        <div class="about">
+        <div data-aos="fade-up" class="about">
           <h2>About</h2>
           <h3>A little about me</h3>
           <p>
@@ -143,10 +145,130 @@
         </div>
       </section>
 
-      <section class="projects-section"></section>
-      <section></section>
+      <section class="projects-section">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="projects">
+            <div class="project" alt="GreenShop">
+              <img src="images/greenshop.png" alt="GreenShop" />
+              <p>GreenShop</p>
+              <span>Minimalist Plant Shop Website</span>
+              <div class="tools-wrapper">
+                <div class="tools">
+                  <img src="images/html.svg" alt="HTML" />
+                  <a href="#">HTML</a>
+                </div>
+                <div class="tools">
+                  <img src="images/css.svg" alt="CSS" />
+                  <a href="#">CSS</a>
+                </div>
+                <div class="tools">
+                  <img src="images/sass.svg" alt="SASS" />
+                  <a href="#">SASS</a>
+                </div>
+                <div class="tools">
+                  <img src="images/figma.svg" alt="Figma" />
+                  <a href="#">Figma</a>
+                </div>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/Serhii269"
+                  class="github"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/feed/?trk=onboarding-landing"
+                  target="_blank"
+                  class="in"
+                ></a>
+              </div>
+            </div>
+
+            <div class="project" alt="Nft-marketplace">
+              <img src="images/nft-marketplace.png" alt="Nft-marketplace" />
+              <p>Nft-marketplace</p>
+              <span>Futuristic website about NFTs</span>
+              <div class="tools-wrapper">
+                <div class="tools">
+                  <img src="images/html.svg" alt="HTML" />
+                  <a href="#">HTML</a>
+                </div>
+                <div class="tools">
+                  <img src="images/css.svg" alt="CSS" />
+                  <a href="#">CSS</a>
+                </div>
+                <div class="tools">
+                  <img src="images/sass.svg" alt="SASS" />
+                  <a href="#">SASS</a>
+                </div>
+                <div class="tools">
+                  <img src="images/js.svg" alt="JavaScript" />
+                  <a href="#">JavaScript</a>
+                </div>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/Serhii269"
+                  class="github"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/feed/?trk=onboarding-landing"
+                  target="_blank"
+                  class="in"
+                ></a>
+              </div>
+            </div>
+            <div class="project" alt="Сalculator">
+              <img src="images/calculator-with-currency.png" alt="Calculator" />
+              <p>Calculator with currency</p>
+              <span>Simple calculator with currency conversion</span>
+              <div class="tools-wrapper">
+                <div class="tools">
+                  <img src="images/python.svg" alt="Python" />
+                  <a href="#">Python</a>
+                </div>
+              </div>
+              <div class="social-links">
+                <a
+                  href="https://github.com/Serhii269"
+                  class="github"
+                  target="_blank"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/feed/?trk=onboarding-landing"
+                  target="_blank"
+                  class="in"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <section class="contact-section">
+      <div class="container">
+        <h2>Contacts</h2>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <footer></footer>
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
   </body>
 </html>
