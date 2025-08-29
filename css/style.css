@@ -49,8 +49,19 @@ body {
 }
 
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(22, 23, 23, 0.3);
+  color: white;
+  padding: 15px;
+  z-index: 1000;
   display: flex;
   justify-content: center;
+  align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 header ul {
   display: inline-flex;
@@ -71,12 +82,12 @@ header ul li a:hover {
   color: #b026ff;
 }
 
+/*
 .header-container {
   margin-top: 30px;
-}
-
+}*/
 .hero-section {
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .hero {
@@ -103,7 +114,10 @@ header ul li a:hover {
   font-weight: 500;
   font-size: 64px;
   line-height: 120%;
-  color: #b026ff;
+  background: linear-gradient(90deg, #fbe2f1 0%, #c12acb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding-bottom: 20px;
   font-family: "cera_probold";
 }
@@ -303,6 +317,9 @@ header ul li a:hover {
   max-width: 350px;
   flex: 1;
 }
+.project .social-links {
+  margin-top: 50px;
+}
 .project p {
   font-weight: 300;
   font-size: 22px;
@@ -320,6 +337,7 @@ header ul li a:hover {
 }
 .project:hover {
   transform: translateY(-7px);
+  background: #334155;
 }
 .project img {
   width: 100%;
@@ -340,10 +358,6 @@ header ul li a:hover {
   transition: 0.3s ease, transform 0.2s ease;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-.tools:hover {
-  background: #334155;
-  transform: translateY(-3px);
-}
 .tools img {
   width: 30px;
   height: 30px;
@@ -361,7 +375,6 @@ header ul li a:hover {
   grid-template-columns: repeat(2, auto);
   grid-auto-rows: auto;
   gap: 10px;
-  margin-bottom: 50px;
 }
 
 .contact-section {
@@ -454,4 +467,18 @@ footer p {
   font-family: "cera_promedium";
   text-align: center;
   margin-bottom: 5px;
+}
+
+.open {
+  display: inline-block;
+  width: 33px;
+  height: 38px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: 0.4s all;
+  background-image: url("../images/open.svg");
+}
+.open:hover {
+  background-image: url("../images/open-hover.svg");
 }/*# sourceMappingURL=style.css.map */
