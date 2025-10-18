@@ -46,6 +46,10 @@
 
 body {
   background-color: #1a1a1a;
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 header {
@@ -481,4 +485,66 @@ footer p {
 }
 .open:hover {
   background-image: url("../images/open-hover.svg");
+}
+
+.blog-fab {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 70px;
+  height: 70px;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "cera_probold";
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.blog-fab .ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(rgb(0, 0, 0) 35%, rgb(58, 58, 58));
+  filter: blur(1px);
+  box-shadow: 0 -4px 15px 0 rgb(187, 174, 183), 0 4px 15px 0 rgb(225, 207, 207);
+  animation: spin 1.7s linear infinite;
+}
+
+.blog-fab::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 50%;
+  background: rgb(36, 36, 36);
+  filter: blur(8px);
+}
+
+.blog-fab .label {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.blog-fab:hover {
+  transform: scale(1.05);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blog-fab .ring {
+    animation: none;
+  }
 }/*# sourceMappingURL=style.css.map */
